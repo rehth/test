@@ -106,3 +106,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 设置redis存储session信息
+SESSION_ENGINE = 'redis_sessions.session'
+# 设置redis的ip地址
+SESSION_REDIS_HOST = 'localhost'
+# 设置redis的端口
+SESSION_REDIS_PORT = 6379
+# 设置redis的数据库index, 即第几个数据库
+SESSION_REDIS_DB = 2
+# redis的密码
+SESSION_REDIS_PASSWORD = ''
+# 前缀
+SESSION_REDIS_PREFIX = 'session'
+

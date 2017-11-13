@@ -17,5 +17,9 @@ from django.conf.urls import url
 from new import views
 
 urlpatterns = [
-    url(r'^test/$', views.test_app)
+    url(r'^test/$', views.test_app),
+    # 测试 sessions redis数据库
+    url(r'^set/$', views.set_sessions),
+    url(r'^get/$', views.get_sessions)
+
 ]
