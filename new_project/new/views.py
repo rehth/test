@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from new.models import Goods
 
 # Create your views here.
 
@@ -26,3 +27,13 @@ def get_sessions(request):
 def editor(request):
     """ 富文本编辑器测试 """
     return render(request, 'new/test_editor.html')
+
+
+def db_editor(request):
+    """ 富文本编辑器测试 数据库测试 """
+    db = request.POST.get('gcontent')
+    g = Goods()
+    g.goods_info = db
+    g.save()   # <p>哈哈，这是啥呀gsdgsdgsdfdsfdsfsd
+    # <span style="text-decoration: underline;">dfsdf</span></p>
+    return HttpResponse(db)

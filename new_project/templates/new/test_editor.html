@@ -15,8 +15,10 @@
 </head>
 <body>
 <h1>富文本编辑器测试</h1>
-<form method="post" action="#">
+<form method="post" action="/db">
+    {% csrf_token %}
     <textarea name='gcontent'>哈哈，这是啥呀</textarea>
+    <input type="submit" value="提交">
 </form>
 </body>
 </html>

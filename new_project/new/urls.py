@@ -21,6 +21,8 @@ urlpatterns = [
     # 测试 sessions redis数据库
     url(r'^set/$', views.set_sessions),
     url(r'^get/$', views.get_sessions),
-    url(r'^editor$', views.editor)
+    url(r'^editor$', views.editor),
+    # 富文本编辑器测试
+    url(r'^db$', views.db_editor),
 
 ]
