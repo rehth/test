@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',  # 注册富文本编辑器
     'new',
 )
 
@@ -106,6 +107,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+# 配置静态文件加载路径
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # 设置redis存储session信息
 SESSION_ENGINE = 'redis_sessions.session'
@@ -119,4 +125,11 @@ SESSION_REDIS_DB = 2
 SESSION_REDIS_PASSWORD = ''
 # 前缀
 SESSION_REDIS_PREFIX = 'session'
+
+# 富文本编辑器配置
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',
+    'width': 600,
+    'height': 400,
+}
 

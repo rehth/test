@@ -21,3 +21,8 @@ def get_sessions(request):
     name = request.session['name']
     ps = request.session['pass']
     return HttpResponse('name:%s, ps:%s' % (name, ps))
+
+
+def editor(request):
+    """ 富文本编辑器测试 """
+    return render(request, 'new/test_editor.html')

@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^test/$', views.test_app),
     # 测试 sessions redis数据库
     url(r'^set/$', views.set_sessions),
-    url(r'^get/$', views.get_sessions)
+    url(r'^get/$', views.get_sessions),
+    url(r'^editor$', views.editor)
 
 ]

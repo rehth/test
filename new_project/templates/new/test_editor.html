@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自定义使用tinymce</title>
+    {# 导入富文本选项 #}
+    <script type="text/javascript" src='/static/js/tiny_mce_src.js'></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            'mode':'textareas',
+            'theme':'advanced',
+            'width':400,
+            'height':100
+        });
+    </script>
+</head>
+<body>
+<h1>富文本编辑器测试</h1>
+<form method="post" action="#">
+    <textarea name='gcontent'>哈哈，这是啥呀</textarea>
+</form>
+</body>
+</html>
