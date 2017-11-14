@@ -26,5 +26,9 @@ urlpatterns = [
     url(r'^db$', views.db_editor),
     # 'zhangqianjuns@163.com'发送邮件测试
     url(r'^send/$', views.send),
-
+    # 测试类视图
+    url(r'^class$', views.MyView.as_view()),
+    # 测试登陆
+    url(r'^login$', views.login),
+    url(r'^verify$', views.verify),
 ]

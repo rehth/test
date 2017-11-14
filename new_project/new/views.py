@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from new.models import Goods
 from new_project import settings
 from django.core.mail import send_mail  # 开启邮件服务
+from django.views.generic import View   # 类视图
 
 # Create your views here.
 
@@ -48,3 +49,37 @@ def send(request):
               ['zhangqianjuns@163.com'],
               html_message=msg)
     return HttpResponse('发送成功')
+
+
+class MyView(View):
+    """ 测试类视图 """
+    def get(self, request, *args, **kwargs):
+        return HttpResponse('my first class views')
+
+
+# /login
+def login(request):
+    name = ''
+    checked = ''
+    # request.COOKIES 是query dict类型
+    if 'rem' in request.COOKIES:
+        name = request.COOKIES['username']
+        checked = 'checked'
+    context = {'name': name, 'checked': checked}
+    return render(request, 'new/login.html', context)
+
+
+# /verify
+def verify(request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    if username == 'zhang' and password == '123':
+        # 设置cookie
+        response = HttpResponse('login')
+        if request.POST.get('rem') == 'on':
+            response.set_cookie('rem', True)
+        response.set_cookie('username', username)
+        return response
+    else:
+        return HttpResponse('失败')
+

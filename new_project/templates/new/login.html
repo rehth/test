@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆login</title>
+</head>
+<body>
+<form action="/verify" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" value="{{ name }}">
+    <br>
+    <br>
+    <input type="password" name="password">
+    <br>
+    <br>
+    {#  记住用户名　如果登陆过且勾选过则自动勾选  #}
+    <input type="checkbox" name="rem" {{ checked }}><span>记住用户名</span>
+    <br>
+    <br>
+    <input type="submit" value="login">
+</form>
+</body>
+</html>
