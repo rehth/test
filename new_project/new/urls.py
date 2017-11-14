@@ -24,5 +24,7 @@ urlpatterns = [
     url(r'^editor$', views.editor),
     # 富文本编辑器测试
     url(r'^db$', views.db_editor),
+    # 'zhangqianjuns@163.com'发送邮件测试
+    url(r'^send/$', views.send),
 
 ]

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from new.models import Goods
+from new_project import settings
+from django.core.mail import send_mail  # 开启邮件服务
 
 # Create your views here.
 
@@ -37,3 +39,12 @@ def db_editor(request):
     g.save()   # <p>哈哈，这是啥呀gsdgsdgsdfdsfdsfsd
     # <span style="text-decoration: underline;">dfsdf</span></p>
     return HttpResponse(db)
+
+
+def send(request):
+    """ 发送邮件测试 """
+    msg = '<a href="http://www.baidu.com">百度<a/>'
+    send_mail('注册激活', '', settings.EMAIL_FROM,
+              ['zhangqianjuns@163.com'],
+              html_message=msg)
+    return HttpResponse('发送成功')
