@@ -5,6 +5,7 @@ from new_project import settings
 from django.core.mail import send_mail  # 开启邮件服务
 from django.views.generic import View   # 类视图
 
+
 # Create your views here.
 
 

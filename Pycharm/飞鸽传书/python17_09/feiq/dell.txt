@@ -1,0 +1,27 @@
+http://192.168.86.94:8080/ 
+------鲁大师 Build V5.15.16.1265------
+
+电脑型号: 戴尔 Inspiron 3543 笔记本电脑
+操作系统: Windows 10 64位
+
+  处理器: 英特尔 Core i5-5200U @ 2.20GHz 双核
+    主板: 戴尔 04XW3R
+    内存: 4 GB ( 海力士 DDR3L 1600MHz )
+		  	
+			DIMM0	海力士 DDR3L 1600MHz 4GB
+			制造日期	2014 年 12月
+			型号	AD HMT451S6BFR8A-PB
+			序列号	114217B4
+	
+
+  主硬盘: 希捷 ST500LT012-1DG142 ( 500 GB / 5400 转/分 )
+    显卡: Nvidia GeForce 820M ( 戴尔 )
+  显示器: 京东方 BOE0615 ( 15.3 英寸  )
+    光驱: 松下 DVD+-RW UJ8E2 DVD刻录机
+    声卡: 瑞昱  @ 英特尔 High Definition Audio Controller
+    网卡: 博通 BCM43142 802.11b/g/n / 戴尔
+
+pip3 install pyreadline
+pip3 install ipython
+pip3 install pygame
+链接: https://pan.baidu.com/s/1eS7U2v4 密码: 423b
